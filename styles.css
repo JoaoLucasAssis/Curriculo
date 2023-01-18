@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap');
+:root {
+    --bio-bg-color: #1E2A3A;
+    --bio-border-color: #293544;
+    --border-color: #999;
+    --about-bg-color: #111821;
+    --text-color: #fff;
+    --highlight-color: #54B689;;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+}
+.highlight {
+    color: var(--highlight-color);
+}
+#container {
+    display: flex;
+    flex-direction: row;
+}
+/*bio-container*/
+#bio-container {
+    flex: 1 1 20%;
+    min-height: 100vh;
+    padding: 30px 12px;
+    text-align: center;
+    background-color: var(--bio-bg-color);
+    border-right: 5px solid var(--bio-border-color);
+}
+#bio-name {
+    margin-bottom: 30px;
+}
+#profile-picture {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+#social-media {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    border-bottom: 1px solid var(--border-color);
+    margin: 25px 0;
+    padding-bottom: 25px;
+}
+#social-media li {
+    font-size: 30px;
+}
+#email-container {
+    display: flex;
+    align-items: center;
+}
+#email-container a {
+    text-decoration: none;
+    margin-left: 5px;
+}
+/*bio-container*/
+
+/*about-container*/
+#about-container {
+    flex: 1 1 80%;
+    background-color: var(--about-bg-color);
+    padding: 50px;
+}
+#subtitle {
+    margin: 15px 0;
+}
+.description {
+    margin-bottom: 10px;
+}
+#projects-title {
+    border-top: 1px solid var(--border-color);
+    margin: 25px 0;
+    padding-top: 25px;
+}
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+}
+.project {
+    flex: 1 1 50%;
+    max-width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.project p {
+    margin-bottom: 5px;
+}
+.project-img {
+    width: 70%;
+    height: auto;
+}
+/*about-container*/
+
+img {
+    object-fit: cover;
+}
+
+@media (max-width: 520px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+    #bio-container {
+        border-right: none;
+        border-bottom: 5px solid var(--bio-border-color)
+    }
+    #bio-name {
+        display: none;
+    }
+    #email-container {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+    #about-container {
+        min-height: auto;
+        text-align: center;
+        padding: 30px;
+    }
+    #about-container .description {
+        max-width: 100%;
+        margin-bottom: 20px;
+        line-height: 25px;
+    }
+    .project {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
